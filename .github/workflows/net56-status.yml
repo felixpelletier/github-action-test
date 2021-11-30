@@ -2,7 +2,7 @@ name: .NET 5/6 transition progress monitor
 on: workflow_dispatch
 
 jobs:
-  create_image:
+  generate_image:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -10,5 +10,9 @@ jobs:
       with:
         python-version: '3.7'
         architecture: 'x64'
-    - run: pip install pycairo
-    - run: python my_script.py
+    - run: pip install pycairo==1.20.1 click==8.0.3
+    - run: python .github/generate_net56_progress_image.py
+    - uses: actions/upload-artifact@v2
+      with:
+        name: net56_progress
+        path: net56_progress.png
