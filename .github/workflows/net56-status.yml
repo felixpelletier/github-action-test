@@ -1,5 +1,9 @@
 name: .NET 5/6 transition progress monitor
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
 
 jobs:
   generate_image:
