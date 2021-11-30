@@ -3,7 +3,7 @@ import click
 
 @click.command()
 @click.option('--width', default=640)
-@click.option('--height', default=120)
+@click.option('--height', default=60)
 @click.option('--output', default="net56_progress.png")
 def generate_image(width, height, output):
 
