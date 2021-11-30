@@ -8,7 +8,7 @@ import click
 def generate_image(width, height, output):
 
     total_crawler_count = 33
-    net5_crawler_count = 17
+    net5_crawler_count = 14
     net5_ratio = float(net5_crawler_count) / float(total_crawler_count)
 
     LINE_W = 2.0
