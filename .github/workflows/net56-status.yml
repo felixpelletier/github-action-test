@@ -1,0 +1,14 @@
+name: .NET 5/6 transition progress monitor
+on: workflow_dispatch
+
+jobs:
+  create_image:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+        architecture: 'x64'
+    - run: pip install pycairo
+    - run: python my_script.py
