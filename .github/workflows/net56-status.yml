@@ -23,4 +23,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Upload to S3
-      run: aws s3 cp net56_progress.png s3://fpelletier-test/net56_progress.png --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+      run: aws s3 cp net56_progress.png s3://fpelletier-test/net56_progress.png --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --cache-control 'no-cache'
